@@ -6,7 +6,11 @@
     "oembed",
     "embed",
     "videos",
-    "audio"
+    "audio",
+    "youtube",
+    "dailymotion",
+    "vine",
+    "vimeo"
   ],
   "license": "BSD 2-Clause",
   "authors": [
