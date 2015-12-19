@@ -1,0 +1,45 @@
+{
+  "name": "octoflare/embedder",
+  "description": "Fetch embeddable links from text.",
+  "keywords": [
+    "embedder",
+    "oembed",
+    "embed",
+    "videos",
+    "audio"
+  ],
+  "license": "BSD 2-Clause",
+  "authors": [
+    {
+      "name": "Daniel Stainback",
+      "email": "daniel@lyften.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.8",
+    "mockery/mockery": "^0.9.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "OctoFlare\\Embedder\\": "src/OctoFlare/Embedder"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "OctoFlare\\Embedder\\Test\\": "tests"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.2-dev"
+    }
+  },
+  "archive" : {
+    "exclude": [
+      "/tests"
+    ]
+  }
+}
