@@ -1,4 +1,4 @@
-# Super Simple Video Embedder
+# Super Simple Link Embedder
 
 [![Latest Stable Version](https://poser.pugx.org/octoflare/embedder/v/stable.png)](https://packagist.org/packages/octoflare/embedder) [![Total Downloads](https://poser.pugx.org/octoflare/embedder/downloads.png)](https://packagist.org/packages/octoflare/embedder) [![Build Status](https://travis-ci.org/OctoFlare/embedder.svg)](https://travis-ci.org/OctoFlare/embedder)
 
