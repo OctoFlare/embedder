@@ -1,6 +1,6 @@
 # Super Simple Video Embedder
 
-[![Latest Stable Version](https://poser.pugx.org/torann/embedder/v/stable.png)](https://packagist.org/packages/torann/embedder) [![Total Downloads](https://poser.pugx.org/torann/embedder/downloads.png)](https://packagist.org/packages/torann/embedder) [![Build Status](https://travis-ci.org/Torann/embedder.svg?branch=master)](https://travis-ci.org/Torann/embedder)
+[![Latest Stable Version](https://poser.pugx.org/octoflare/embedder/v/stable.png)](https://packagist.org/packages/octoflare/embedder) [![Total Downloads](https://poser.pugx.org/octoflare/embedder/downloads.png)](https://packagist.org/packages/octoflare/embedder) [![Build Status](https://travis-ci.org/octoflare/embedder.svg?branch=master)](https://travis-ci.org/octoflare/embedder)
 
 Fetch embeddable links from text.
 
@@ -20,7 +20,7 @@ $ composer require octoflare/embedder
 
 ```php
 $text = 'Hi, I just saw this video https://www.youtube.com/watch?v=W9cA9Z4bNzk and the http://youtu.be/dMH0bHeiddddd';
-$embedder = new \Torann\Embedder\Embed();
+$embedder = new \OctoFlare\Embedder\Embed();
 
 $output = $embedder->getUrl($text);
 ```
@@ -35,7 +35,7 @@ Will output string:
 
 ```php
 $text = 'Hi, I just saw this video https://www.youtube.com/watch?v=W9cA9Z4bNzk and the http://youtu.be/dMH0bHeiddddd';
-$embedder = new \Torann\Embedder\Embed();
+$embedder = new \OctoFlare\Embedder\Embed();
 
 $output = $embedder->getUrls($text);
 ```
