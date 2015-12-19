@@ -25,7 +25,7 @@ class Embed
      * Get embeddable version of URL.
      *
      * @param  string $body
-     * @return array
+     * @return string
      */
     public function getUrl($body = null)
     {
@@ -34,7 +34,7 @@ class Embed
             return $service->getUrl();
         }
 
-        return null;
+        return '';
     }
 
     /**
