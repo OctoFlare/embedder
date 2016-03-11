@@ -9,7 +9,7 @@ class Embed
      *
      * @var string
      */
-    protected $urlRegex = '~\bhttps?:\/\/[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]?|\/))~i';
+    protected $urlRegex = '~\bhttps?:\/\/[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]?|\/|_))~i';
 
     /**
      * Constructs new embed instance.
