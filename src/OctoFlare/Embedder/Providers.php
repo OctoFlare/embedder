@@ -34,6 +34,7 @@ class Providers
         'vimeo.com' => Providers\Vimeo::class,
         'vine.co' => Providers\Vine::class,
         'm.youtube.com' => Providers\Youtube::class,
+        '*.soundcloud.com' => Providers\SoundCloud::class,
         'youtube.com' => Providers\Youtube::class,
         'youtu.be' => Providers\Youtube::class,
     ];
@@ -50,6 +51,7 @@ class Providers
      * Returns first valid services found.
      *
      * @param  array|string $urls
+     *
      * @return mixed
      */
     public function first($urls)
@@ -58,13 +60,14 @@ class Providers
             return (strpos($key, '*') !== false);
         });
 
-        return $this->find((array) $urls, true);
+        return $this->find((array)$urls, true);
     }
 
     /**
      * Returns an array with all valid services found.
      *
      * @param  array|string $urls
+     *
      * @return array
      */
     public function all($urls)
@@ -73,7 +76,7 @@ class Providers
             return (strpos($key, '*') !== false);
         });
 
-        return $this->find((array) $urls);
+        return $this->find((array)$urls);
     }
 
     /**
@@ -81,6 +84,7 @@ class Providers
      *
      * @param  array $urls
      * @param  bool  $firstOnly
+     *
      * @return mixed
      */
     protected function find(array $urls = [], $firstOnly = false)
@@ -110,6 +114,7 @@ class Providers
      * Gets a normalized host for the given $url
      *
      * @param  string $url
+     *
      * @return string
      */
     protected function getHost($url)
