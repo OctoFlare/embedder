@@ -6,7 +6,9 @@ use OctoFlare\Embedder\Url;
 
 class DailyMotion extends ProviderAbstract
 {
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     public function validateUrl()
     {
         $this->url->addWWW();
@@ -16,7 +18,9 @@ class DailyMotion extends ProviderAbstract
         return (preg_match('~dailymotion\.com/video/(?:[^/]+)/?~i', $this->url));
     }
 
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     protected function normalizeUrl()
     {
         if (preg_match('~dailymotion\.com/(?:embed/)?(?:video|live)/([^/]+)/?~i', $this->url, $matches)) {
@@ -29,7 +33,9 @@ class DailyMotion extends ProviderAbstract
         }
     }
 
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     public function getUrl()
     {
         preg_match('~/video/([^/]+)~i', $this->url, $matches);

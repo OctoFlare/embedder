@@ -4,7 +4,9 @@ namespace OctoFlare\Embedder\Providers;
 
 class Vine extends ProviderAbstract
 {
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     public function validateUrl()
     {
         $this->url->stripQueryString();
@@ -14,7 +16,9 @@ class Vine extends ProviderAbstract
         return (preg_match('~vine\.co/v/(?:[^/]+)$~i', $this->url));
     }
 
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     public function getUrl()
     {
         return "{$this->url}/embed/simple";

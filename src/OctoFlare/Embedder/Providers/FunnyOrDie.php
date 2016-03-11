@@ -6,7 +6,9 @@ use OctoFlare\Embedder\Url;
 
 class FunnyOrDie extends ProviderAbstract
 {
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     public function validateUrl()
     {
         $this->url->stripQueryString();
@@ -15,7 +17,9 @@ class FunnyOrDie extends ProviderAbstract
         return (preg_match('~funnyordie\.com/videos/(?:[\w\d]+)~i', $this->url));
     }
 
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     protected function normalizeUrl()
     {
         if (preg_match('~\.com/embed/~i', $this->url)) {
@@ -23,7 +27,9 @@ class FunnyOrDie extends ProviderAbstract
         }
     }
 
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     public function getUrl()
     {
         preg_match('~/videos/([\w\d]+)/?~', $this->url, $matches);

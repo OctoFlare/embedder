@@ -6,7 +6,9 @@ use OctoFlare\Embedder\Url;
 
 class Vimeo extends ProviderAbstract
 {
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     public function validateUrl()
     {
         $this->url->stripWWW();
@@ -15,7 +17,9 @@ class Vimeo extends ProviderAbstract
         return (preg_match('~/(?:[0-9]{5,12})$~i', $this->url));
     }
 
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     protected function normalizeUrl()
     {
         $this->url->stripQueryString();
@@ -25,7 +29,9 @@ class Vimeo extends ProviderAbstract
         }
     }
 
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     public function getUrl()
     {
         preg_match('~/([0-9]{5,12})$~i', $this->url, $matches);

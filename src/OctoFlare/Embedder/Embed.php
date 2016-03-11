@@ -25,12 +25,14 @@ class Embed
      * Get embeddable version of URL.
      *
      * @param  string $body
+     *
      * @return string
      */
     public function getUrl($body = null)
     {
         if (preg_match_all($this->urlRegex, $body, $matches)) {
             $service = $this->providers->first($matches['0']);
+
             return $service->getUrl();
         }
 
@@ -41,6 +43,7 @@ class Embed
      * Get embeddable version of a set of URLs.
      *
      * @param  string|array $body
+     *
      * @return array
      */
     public function getUrls($body = null)

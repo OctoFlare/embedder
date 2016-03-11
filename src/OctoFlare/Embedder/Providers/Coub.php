@@ -4,7 +4,9 @@ namespace OctoFlare\Embedder\Providers;
 
 class Coub extends ProviderAbstract
 {
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     public function validateUrl()
     {
         $this->url->stripQueryString();
@@ -14,13 +16,17 @@ class Coub extends ProviderAbstract
         return (preg_match('~coub\.com/(?:view|embed)/(?:[\w\d]+)$~i', $this->url));
     }
 
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     protected function normalizeUrl()
     {
         $this->url->stripQueryString();
     }
 
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     public function getUrl()
     {
         preg_match('~/([\w\d]+)$~i', $this->url, $matches);

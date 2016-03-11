@@ -6,13 +6,17 @@ use OctoFlare\Embedder\Url;
 
 class Chirbit extends ProviderAbstract
 {
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     public function validateUrl()
     {
         return (preg_match('~chirb\.it/(?:[\w\d]+)/?$~i', $this->url));
     }
 
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     protected function normalizeUrl()
     {
         if (preg_match('~chirb\.it/wp/([\w\d]+)/?~i', $this->url, $matches)) {
@@ -20,7 +24,9 @@ class Chirbit extends ProviderAbstract
         }
     }
 
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     public function getUrl()
     {
         preg_match('~chirb\.it/([\w\d]+)/?~i', $this->url, $matches);

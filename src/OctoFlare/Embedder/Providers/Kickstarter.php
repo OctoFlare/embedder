@@ -4,7 +4,9 @@ namespace OctoFlare\Embedder\Providers;
 
 class Kickstarter extends ProviderAbstract
 {
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     public function validateUrl()
     {
         $this->url->stripQueryString();
@@ -14,14 +16,18 @@ class Kickstarter extends ProviderAbstract
         return (preg_match('~/projects/(?:[^/]+)/(?:[^/]+)$~i', $this->url));
     }
 
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     protected function normalizeUrl()
     {
         $this->url->addWWW();
         $this->url->stripQueryString();
     }
 
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     public function getUrl()
     {
         return "{$this->url}/widget/video.html";

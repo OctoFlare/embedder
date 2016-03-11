@@ -4,7 +4,9 @@ namespace OctoFlare\Embedder\Providers;
 
 class CollegeHumor extends ProviderAbstract
 {
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     public function validateUrl()
     {
         $this->url->addWWW();
@@ -12,13 +14,17 @@ class CollegeHumor extends ProviderAbstract
         return (preg_match('~collegehumor\.com/(?:video|embed)/(?:[0-9]{5,10})/?~i', $this->url));
     }
 
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     protected function normalizeUrl()
     {
         $this->url->stripQueryString();
     }
 
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     public function getUrl()
     {
         $this->url->removeHttp();
