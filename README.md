@@ -75,10 +75,14 @@ Will output array:
 
 ## Change Log
 
-**05/17/2016**
+**0.0.3**
 
  - Add simple OpenGraph support
 
-**12/19/2015**
+**0.0.2**
+
+ - Fix return type of single urls
+
+**0.0.1**
 
  - First release
