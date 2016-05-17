@@ -49,7 +49,35 @@ Will output array:
 ]
 ```
 
+## OpenGraph
+
+Access OpenGraph meta data of a given URL.
+
+```php
+$embedder = new \OctoFlare\Embedder\Embed();
+
+$output = $embedder->getMeta('http://www.rottentomatoes.com/m/771439257');
+```
+
+Will output array:
+
+```
+[
+  "description" => "In this heart-pounding thriller from acclaimed writer and director Mike Flanagan (Oculus, Before I Wake), silence takes on a terrifying new dimension for a..."
+  "title" => "Hush"
+  "type" => "video.movie"
+  "image" => "https://resizing.flixster.com/R6FvucOnw5bYh_sffSMbvFSXX2w=/220x326/v1.bTsxMTcwNDk2MDtqOzE2OTc1OzIwNDg7MjIwOzMyNg"
+  "image:width" => "800"
+  "image:height" => "1200"
+  "url" => "http://www.rottentomatoes.com/m/771439257/"
+]
+```
+
 ## Change Log
+
+**05/17/2016**
+
+ - Add simple OpenGraph support
 
 **12/19/2015**
 

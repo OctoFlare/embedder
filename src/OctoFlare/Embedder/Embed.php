@@ -5,6 +5,20 @@ namespace OctoFlare\Embedder;
 class Embed
 {
     /**
+     * Providers instance.
+     *
+     * @var \OctoFlare\Embedder\Providers
+     */
+    protected $providers;
+
+    /**
+     * OpenGraph instance.
+     *
+     * @var \OctoFlare\Embedder\OpenGraph
+     */
+    protected $opengraph;
+
+    /**
      * The pattern used to extract urls from a text
      *
      * @var string
@@ -13,18 +27,17 @@ class Embed
 
     /**
      * Constructs new embed instance.
-     *
-     * @param array $config
      */
-    public function __construct(array $config = [])
+    public function __construct()
     {
         $this->providers = new Providers();
+        $this->opengraph = new OpenGraph();
     }
 
     /**
      * Get embeddable version of URL.
      *
-     * @param  string $body
+     * @param string $body
      *
      * @return string
      */
@@ -40,9 +53,21 @@ class Embed
     }
 
     /**
+     * Get the OpenGraph data for the URL.
+     *
+     * @param string $url
+     *
+     * @return array|null
+     */
+    public function getMeta($url)
+    {
+        return $this->opengraph->fetch($url);
+    }
+
+    /**
      * Get embeddable version of a set of URLs.
      *
-     * @param  string|array $body
+     * @param string|array $body
      *
      * @return array
      */
